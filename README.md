@@ -14,7 +14,34 @@ This is a simple API that serves random Pokémon facts.
 2. Run `npm install` to install dependencies
 3. Start the server with `npm start`
 
-## Usage
+## Documentation
+
+The API documentation is available at [https://abishekvenkat.github.io/pokemonfactsapi/](https://abishekvenkat.github.io/pokemonfactsapi/).
+
+#### Query Parameters
+
+- `count` (optional): Number of random facts to retrieve (default: 1)
+- `id` (optional): ID of a specific fact to retrieve
+- `gen` (optional): Generation of Pokémon to filter facts (1-3)
+
+#### Responses
+
+- 200 OK: Successful response
+  ```json
+  {
+    "data": [
+      "Pokémon fact string"
+    ]
+  }
+  ```
+- 500 Internal Server Error
+  ```json
+  {
+    "error": "Something went wrong!"
+  }
+  ```
+
+## Usage Examples
 
 - Get a random fact: `GET https://pokefacts.vercel.app/`
 - Get multiple random facts: `GET https://pokefacts.vercel.app/?count=3`
